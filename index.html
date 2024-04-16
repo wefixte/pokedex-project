@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+	<script src="pokemon.js" defer></script>
+	<title>Pokédex</title>
+</head>
+
+<body>
+	<!---------- HEADER ---------->
+	<header class="header-home">
+		<section class="container">
+			<div class="logo">
+				<img src="images/pokeball.svg" alt="Pokéball" />
+				<h1>Shiny Pokédex</h1>
+			</div>
+			<div class="search">
+				<h2>Search for a Pokémon</h2>
+				<img src="images/search.svg" alt="Search" class="search-icon"/>
+				<input type="text" placeholder="Name or Number" class="search-input" id="search-input"/>
+			</div>
+		</section>
+	</header>
+
+	<!---------- MAIN ---------->
+	<section class="pokemon-list">
+		<div class="container">
+			<div class="list">
+			</div>
+			<div id="search-no-found">
+				<p>No Pokémon found</p>
+			</div>
+		</div>
+	</section>
+
+	<!---------- FOOTER ---------->
+	<footer>
+		<p>©Wefixte 2024</p>
+	</footer>
+
+</body>
+</html>
