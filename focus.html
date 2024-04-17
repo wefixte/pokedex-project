@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Focus Pokémon</title>
+	<script src="focus.js" defer></script>
+</head>
+
+<body>
+
+	<!---------- HEADER ---------->
+	<header>
+		<a href="index.html">Home</a>
+	</header>
+	<!---------- MAIN ---------->
+
+	<main>
+		<!-- SECTION IMAGE POKEMON -->
+		<section class="image-focus">
+			<a href="#" class="arrow-left" id="arrow-left">
+				<img src="images/chevron_left.svg" alt="back">
+			</a>
+			<div class="detail-img">
+				<img src="" alt="">
+			</div>
+			<a href="#" class="arrow-right" id="arrow-right">
+				<img src="images/chevron_right.svg" alt="back">
+			</a>			
+		</section>
+
+		<!-- SECTION INFOS/STATS POKEMON -->
+		<section class="focus-infos">
+			<h1 class="name"></h1>
+			<div class="pokemon-id">
+				<p class="id"></p>
+			</div>	
+			<div class="power-type">
+				<p class="type1"></p>
+				<p class="type2"></p>
+			</div>
+			<div>
+				<h2>Description</h2>
+				<p class="description"></p>
+			</div>
+
+			<h2>Stats</h2>
+			<div class="informations">
+				<div class="detail">
+					<p>Height</p>
+					<p class="height"></p>
+				</div>
+				<div class="detail">
+					<p>Weight</p>
+					<p class="weight"></p>
+				</div>
+
+				<!-- STATS PROGRESS BAR -->
+				<div class="stats-wrap" data-stat="HP">
+					<p class="stats">HP</p>
+					<progress value="" max="100" class="progress-bar"></progress>
+				</div>
+				<div class="stats-wrap" data-stat="SPEED">
+					<p class="stats">Speed</p>
+					<progress value="" max="100" class="progress-bar"></progress>
+				</div>
+				<div class="stats-wrap" data-stat="ATK">
+					<p class="stats">Attack</p>
+					<progress value="" max="100" class="progress-bar"></progress>
+				</div>
+				<div class="stats-wrap" data-stat="DEF">
+					<p class="stats">Defense</p>
+					<progress value="" max="100" class="progress-bar"></progress>
+				</div>
+				<div class="stats-wrap" data-stat="SATK">
+					<p class="stats">Special Attack</p>
+					<progress value="" max="100" class="progress-bar"></progress>
+				</div>
+				<div class="stats-wrap" data-stat="SDEF">
+					<p class="stats">Special Defense</p>
+					<progress value="" max="100" class="progress-bar"></progress>
+				</div>
+			</div>
+		</section>
+		<img src="images/pokedex.svg" alt="Pokeball" class="image-ball">
+	</main>
+
+	<!---------- FOOTER ---------->
+	<footer>
+		<p>©Wefixte 2024</p>
+	</footer>
+
+</body>
+</html>
