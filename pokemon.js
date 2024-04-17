@@ -12,7 +12,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=${MAX_POKEMON}`)
 	displayPokemons(allPokemons);
 });
 
-async function fetchPokemons(pokemons) {
+async function fetchPokemons(id) {
 	try {
 		const [pokemon, pokemonSpecies] = 
 		await Promise.all([fetch(`https://pokeapi.co/api/v2/pokemon?limit=${id}`)
@@ -47,8 +47,8 @@ function displayPokemons(pokemons) {
 		`;
 
 		listItem.addEventListener('click', async () => {
-			const success = await fetchPokemons(pokemonID);
-			if (success) {
+			const { pokemon, pokemonSpecies } = await fetchPokemons(pokemonID);
+			if (pokemon && pokemonSpecies) {
 				window.location.href = `focus.html?id=${pokemonID}`;
 			}
 		});
