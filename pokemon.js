@@ -20,7 +20,7 @@ async function fetchPokemons(pokemons) {
 		fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
 		.then((response) => response.json()),
 	])
-	return true
+	return { pokemon, pokemonSpecies };
 	}	catch (error) {
 		console.error("error - failed to fetch pokemon");
 	}
@@ -49,9 +49,28 @@ function displayPokemons(pokemons) {
 		listItem.addEventListener('click', async () => {
 			const success = await fetchPokemons(pokemonID);
 			if (success) {
-				window.location.href = `details.html?id=${pokemonID}`;
+				window.location.href = `focus.html?id=${pokemonID}`;
 			}
 		});
 		listWrapper.appendChild(listItem);
 	});
+}
+
+searchInput.addEventListener('input', (doSearch));
+
+function doSearch() {
+	const searchTerm = searchInput.value.toLowerCase();
+	let filteredPokemons;
+	filteredPokemons = allPokemons.filter((pokemon) => {
+		const pokemonID = pokemon.url.split('/')[6];
+		return pokemonID.startsWith(searchTerm) || pokemon.name.toLowerCase().includes(searchTerm);
+	});
+
+	displayPokemons(filteredPokemons);
+
+	if (filteredPokemons.length === 0 && searchTerm !== '') {
+		NoFound.style.display = 'block';
+	} else {
+		NoFound.style.display = 'none';
+	}
 }
