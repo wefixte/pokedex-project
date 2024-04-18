@@ -64,7 +64,7 @@ function doSearch() {
 
 	filteredPokemons = allPokemons.filter((pokemon) => {
 		const pokemonID = pokemon.url.split('/')[6];
-		return pokemonID.startsWith(searchTerm) || pokemon.name.toLowerCase().includes(searchTerm);
+		return pokemonID.startsWith(searchTerm) || pokemon.name.toLowerCase().startsWith(searchTerm);
 	});
 
 	displayPokemons(filteredPokemons);
