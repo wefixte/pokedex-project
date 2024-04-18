@@ -64,24 +64,37 @@ function displayPokemon(pokemon) {
 	img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png`;
 	img.alt = name;
 
-	//Display height and weight
+	// Display height and weight
 	document.querySelector(".height").textContent = `${weight / 10}kg`;
 	document.querySelector(".weight").textContent = `${height / 10}m`;
 
-	// Display Stats in progress bar
-	const statsElement = document.querySelector(".stats");
-	statsElement.innerHTML = "";
-	const statsNames = {
+	// Display stats
+	const statNameMapping = {
 		hp: "HP",
-		speed: "Speed",
 		attack: "Attack",
 		defense: "Defense",
+		speed: "Speed",
 		"special-attack": "Special Attack",
-		"special-defense": "Special Defense"
-	};
-	//TODO: Add the stats to the progress bar
-}
+		"special-defense": "Special Defense",
+	}; 
 
+	// Loop through the stats and update the progress bars
+    stats.forEach(({ stat, base_stat }) => {
+        const statName = statNameMapping[stat.name];
+        const progressValue = base_stat;
+        const progressMax = 100;
+
+		// Update the value in the progress bar for each stat
+        const statsWrap = document.querySelector(`.stats-wrap[data-stat="${statName}"]`);
+        if (statsWrap) {
+            const progressBar = statsWrap.querySelector(".progress-bar");
+            if (progressBar) {
+                progressBar.value = progressValue;
+                progressBar.max = progressMax;
+            }
+        }
+    });
+}
 
 // Function to return the description text in English
 function getEnglishDescriptionText(pokemonSpecies) {
@@ -107,3 +120,4 @@ function createAndAppendElement(parent, tag, options = {}) {
 	parent.appendChild(element);
 	return element;
   }
+  
