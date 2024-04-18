@@ -61,6 +61,7 @@ searchInput.addEventListener('input', (doSearch));
 function doSearch() {
 	const searchTerm = searchInput.value.toLowerCase();
 	let filteredPokemons;
+
 	filteredPokemons = allPokemons.filter((pokemon) => {
 		const pokemonID = pokemon.url.split('/')[6];
 		return pokemonID.startsWith(searchTerm) || pokemon.name.toLowerCase().includes(searchTerm);
@@ -68,7 +69,7 @@ function doSearch() {
 
 	displayPokemons(filteredPokemons);
 
-	if (filteredPokemons.length === 0 && searchTerm !== '') {
+	if (filteredPokemons.length === 0) {
 		NoFound.style.display = 'block';
 	} else {
 		NoFound.style.display = 'none';
