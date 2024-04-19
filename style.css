@@ -13,3 +13,25 @@
   margin-top: 20px;
   color: red;
 }
+
+/********** FILTERS **********/
+.filters {
+  text-align: center;
+  margin-top: 20px;
+}
+.filter-btn {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.filter-btn:hover {
+  background-color: brown;
+}
