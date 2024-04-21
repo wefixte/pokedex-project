@@ -86,14 +86,16 @@ function displayPokemons(pokemons) {
         listItem.className = "list-item";
 
         listItem.innerHTML = `
-            <div class="num-wrapper">
-                <p class="">#${pokemonID}</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemonID}.png" alt="${pokemon.name}">
-            </div>
-            <div class="name-wrapper">
-                <p class="name">${pokemon.name}</p>
+            <div class="pokemon-wrapper">
+                <div class="image-wrapper">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemonID}.png" alt="${pokemon.name}">
+                </div>
+                <div class="num-wrapper">
+                    <p class="">#${pokemonID}</p>
+                </div>
+                <div class="name-wrapper">
+                    <p class="name">${pokemon.name}</p>
+                </div>
             </div>
         `;
 

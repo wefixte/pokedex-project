@@ -7,31 +7,207 @@
   
 /********** GLOBAL **********/
 
+body {
+  font-family: VT323, sans-serif;
+  color: #333;
+  margin: 0;
+  min-height: 100%;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0em;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1;
+  margin: 0 0 20px 0;
+}
+
+/********** MAIN **********/
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.pokemon-list {
+  overflow-y: auto;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-wrapper {
+  text-align: center;
+  margin: 15px;
+}
+
+.num-wrapper {
+  font-weight: bold;
+  text-align: right;
+  padding: 0 8px;
+  width: fit-content;
+}
+
+.name-wrapper {
+  font-weight: bold;
+  text-align: center;
+  margin: -22.5px 0 0 20px;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: 100%;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.list-item {
+  width: fit-content;
+  border-radius: 8px;
+}
+
+
+/********** SEARCH **********/
+.search {
+  text-align: center;
+  background-color: #282828;
+  padding: 15px 15px 20px 15px;
+}
+
+.search h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.search-input {
+  width: 70%;
+  padding: 8px;
+  border: 0.5px;
+  border-radius: 10px;
+  background-color: white;
+  font: inherit;
+}
+
 .search-no-found {
   display: none;
   text-align: center;
-  margin-top: 20px;
-  color: red;
+  font-size: 2em;
+  margin: 20px 0 20px 0;
 }
 
-/********** FILTERS **********/
-.filters {
+/********** PAGINATION **********/
+.pagination {
   text-align: center;
-  margin-top: 20px;
+  margin: 10px 0  0 0;
 }
-.filter-btn {
-  background-color: red;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
+
+.pagination button {
+  font: inherit;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e656d2;
+  color: white;
   cursor: pointer;
-  border-radius: 5px;
 }
-.filter-btn:hover {
-  background-color: brown;
+
+/********** FOOTER **********/
+footer {
+  margin: 10px 0 10px 0;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 1.2em;
 }
+
+/********** FOCUS PAGE **********/
+
+.header-focus {
+  background-color: #282828;
+  padding: 10px 0 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.header-focus a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px 0 10px;
+}
+
+/***** IMAGE FOCUS *****/
+.image-focus {
+  position: relative;
+}
+
+.detail-img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.detail-img img {
+  width: 100%;
+  height: 100%;
+}
+.arrow img {
+  width: 50px
+}
+
+.image-focus a.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.image-focus a.arrow.arrow-left {
+  left: 0;
+}
+
+.image-focus a.arrow.arrow-right {
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/********** FILTERS 
+.filters {
+  margin: 20px 0 20px 0;
+}
+
+.filter-btn {
+  font: inherit;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0e5cb4;
+  color: white;
+  cursor: pointer;
+}
+**********/

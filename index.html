@@ -6,25 +6,29 @@
     <link rel="stylesheet" href="style.css">
 	<script src="pokemon.js" defer></script>
 	<title>Pokédex</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<!---------- HEADER ---------->
 	<header class="header-home">
-		<section class="container">
+		<section>
 			<div class="logo">
 				<img src="images/pokeball.svg" alt="Pokéball">
 				<h1>Shiny Pokédex</h1>
 			</div>
 			<div class="search">
 				<h2>Search for a Pokémon</h2>
-				<img src="images/search.svg" alt="Search" class="search-icon">
 				<input type="text" placeholder="Name or Number" class="search-input" id="search-input">
 			</div>
 		</section>
 	</header>
 
 	<!---------- FILTERS ---------->
+	<!-- Later to do
 	<section class="filters">
         <button class="filter-btn" id="all">All</button>
 		<button class="filter-btn" id="normal">Normal</button>
@@ -46,6 +50,7 @@
 		<button class="filter-btn" id="steel">Steel</button>
 		<button class="filter-btn" id="fairy">Fairy</button>
     </section>
+	-->
 
 	<!---------- MAIN ---------->
 	<section class="pokemon-list">
@@ -60,8 +65,6 @@
 
 	<section class="pagination">
 		<div class="container">
-			<button class="prev-btn" id="prev-btn">Previous</button>
-			<button class="next-btn" id="next-btn">Next</button>
 		</div>
 	</section>
 
