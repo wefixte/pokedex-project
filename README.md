@@ -1,4 +1,4 @@
-![pokemon banner](https://github.com/wefixte/pokedex-project/blob/main/readme_pokemon.jpg?raw=true)
+![pokemon banner](https://github.com/wefixte/pokedex-project/blob/main/images/readme_pokemon.jpg?raw=true)
 
 # Shiny Pokédex Project
 
