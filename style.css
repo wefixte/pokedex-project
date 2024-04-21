@@ -19,10 +19,10 @@ body {
 }
 
 h1 {
+  margin: 20px 0 20px 0;
   font-size: 4rem;
   text-align: center;
   line-height: 1;
-  margin: 0 0 20px 0;
 }
 
 /********** MAIN **********/
@@ -107,6 +107,7 @@ h1 {
 .pagination {
   text-align: center;
   margin: 10px 0  0 0;
+  padding: 0 20px 0 20px;
 }
 
 .pagination button {
@@ -128,6 +129,7 @@ footer {
   text-align: right;
   font-size: 1.2em;
   max-width: 700px;
+  padding: 0 20px 20px 0;
 }
 
 /********** FOCUS PAGE **********/
@@ -202,6 +204,7 @@ footer {
   z-index: 2;
   margin: auto;
   max-width: 700px;
+  padding: 0 20px 0 20px;
 }
 
 .focus-infos .name{
