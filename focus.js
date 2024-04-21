@@ -100,7 +100,8 @@ function displayPokemon(pokemon) {
 function getEnglishDescriptionText(pokemonSpecies) {
 	for (let entry of pokemonSpecies.flavor_text_entries) {
 		if (entry.language.name === "en") {
-			return entry.flavor_text;
+			let flavor = entry.flavor_text.replace(/\f/g, " ");
+			return flavor;
 		}
 	}
 }

@@ -124,31 +124,33 @@ h1 {
 
 /********** FOOTER **********/
 footer {
-  margin: 10px 0 10px 0;
-  padding-right: 10px;
+  margin: 20px auto auto auto;
   text-align: right;
   font-size: 1.2em;
+  max-width: 700px;
 }
 
 /********** FOCUS PAGE **********/
 
 .header-focus {
   background-color: #282828;
-  padding: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
   position: relative;
   z-index: 2;
 }
 
 .header-focus a {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin: 0 10px 0 10px;
+  margin: 0 0 0 15px;
 }
 
 /***** IMAGE FOCUS *****/
 .image-focus {
   position: relative;
+  margin: auto;
+  max-width: 700px;
 }
 
 .detail-img {
@@ -183,14 +185,58 @@ footer {
   right: 0;
 }
 
+.pokemon-id {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
 
+/***** INFOS FOCUS *****/
 
+.focus-infos {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  max-width: 700px;
+}
 
+.focus-infos .name{
+  text-transform: capitalize;
+}
+.detail {
+  display: flex;
+  align-items: flex-end;
+}
 
+.detail .height {
+  margin: 0 0 0 10px;
+}
 
+.detail .weight {
+  margin: 0 0 0 10px;
+}
 
+/* STATS */
+.stats-wrap {
+  display: flex;
+  align-items: center;
+}
 
+.stats {
+  font-size: 1.3em;
+  width: 120px;
+  white-space: nowrap;
+}
 
+.stats-wrap .progress-bar {
+  flex: 1;
+  height: 6px;
+  border-radius: 10%;
+}
 
 
 /********** FILTERS 

@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Focus Pokémon</title>
 	<script src="focus.js" defer></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,6 +22,9 @@
 	<main>
 		<!-- SECTION IMAGE POKEMON -->
 		<section class="image-focus">
+			<div class="pokemon-id">
+				<p class="id"></p>
+			</div>
 			<a href="#" class="arrow arrow-left" id="arrow-left">
 				<img src="images/chevron_left.svg" alt="back">
 			</a>
@@ -33,9 +39,6 @@
 		<!-- SECTION INFOS/STATS POKEMON -->
 		<section class="focus-infos">
 			<h1 class="name"></h1>
-			<div class="pokemon-id">
-				<p class="id"></p>
-			</div>	
 			<div class="power-type">
 				<p class="type1"></p>
 				<p class="type2"></p>
@@ -45,18 +48,19 @@
 				<p class="description"></p>
 			</div>
 
-			<h2>Stats</h2>
+			<h2>Characteristics</h2>
 			<div class="informations">
 				<div class="detail">
-					<p>Height</p>
+					<p>Height:</p>
 					<p class="height"></p>
 				</div>
 				<div class="detail">
-					<p>Weight</p>
+					<p>Weight:</p>
 					<p class="weight"></p>
 				</div>
 
 				<!-- STATS PROGRESS BAR -->
+				<h2>Stats</h2>
 				<div class="stats-wrap" data-stat="HP">
 					<p class="stats">HP</p>
 					<progress value="" max="100" class="progress-bar"></progress>
@@ -83,7 +87,6 @@
 				</div>
 			</div>
 		</section>
-		<img src="images/pokedex.svg" alt="Pokeball" class="image-ball">
 	</main>
 
 	<!---------- FOOTER ---------->
